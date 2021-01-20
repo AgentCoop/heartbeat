@@ -1,0 +1,10 @@
+syntax="proto3";
+package utils.heartbeat;
+option go_package = "heartbeat/api";
+
+message Request {}
+message Response {}
+
+service HeartBeat {
+  rpc Foo(Request) returns (Response) {}
+}

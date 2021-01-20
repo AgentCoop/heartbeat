@@ -4,6 +4,11 @@
 *.dll
 *.so
 *.dylib
+*.idea
+src
+src/heartbeat/api
+!src/heartbeat
+pkg
 
 # Test binary, built with `go test -c`
 *.test
