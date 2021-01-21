@@ -1,5 +1,5 @@
 syntax="proto3";
-package utils.heartbeat;
+package heartbeat.utils;
 option go_package = "api/heartbeat";
 
 message Request {}
