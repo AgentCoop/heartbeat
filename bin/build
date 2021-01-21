@@ -2,10 +2,11 @@
 
 set -e
 
-ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+SRC="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+PKGROOT=$(realpath $SRC/..)
 
 protoc \
-    -I./api \
-    --go_out=./src \
-    --go-grpc_out=./src \
-    ./api/heartbeat.proto
+    -I$PKGROOT/api \
+    --go_out=$PKGROOT/internal \
+    --go-grpc_out=$PKGROOT/internal \
+    $PKGROOT/api/heartbeat.proto
