@@ -4,7 +4,7 @@ set -e
 
 SRC="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 PKGROOT=$(realpath $SRC/..)
-PROTOUT=$PKGROOT/src/heartbeat.service/internal
+PROTOUT=$PKGROOT/autogen
 
 protoc \
     -I$PKGROOT/api \

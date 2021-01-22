@@ -1,9 +1,10 @@
+//go:generate ../bin/protogen
 package api
 
 import (
 	"fmt"
 	"context"
-	"heartbeat.service/internal/api/heartbeat"
+	"github.com/AgentCoop/heartbeat/autogen/api/heartbeat"
 	"google.golang.org/grpc"
 )
 
